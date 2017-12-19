@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".NotiActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:hint="Notification Text"
+        android:inputType="text"
+        android:text="Notification Text"
+        android:padding="16dp" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/radioGroup"
+        android:padding="16dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instant"
+            android:id="@+id/radNow"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 seconds"
+            android:id="@+id/rad5"
+            android:onClick="onRadioButtonClicked" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 seconds"
+            android:id="@+id/rad10"
+            android:onClick="onRadioButtonClicked" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timed Notification"
+            android:id="@+id/radTimed"
+            android:onClick="onRadioButtonClicked" />
+
+    </RadioGroup>
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timePicker"
+        android:layout_gravity="center_horizontal"
+        android:timePickerMode="spinner" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Notification Time"
+        android:id="@+id/textView"
+        android:padding="16dp" />
+
+</LinearLayout>
